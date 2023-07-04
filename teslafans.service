@@ -1,0 +1,12 @@
+[Unit]
+Description=Fancontrols for Tesla Cards
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+ExecStart=/home/bas/anaconda3/envs/FANCONTROL/bin/python /home/bas/programs/fancontrol.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target
